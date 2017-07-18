@@ -1,0 +1,65 @@
+inicializa_tabuleiro([])
+
+# descricao:
+#	funcao que inicializa o tabuleiro
+# a funcao deve:
+#	gerar uma matriz 8x8 com campos None
+#	preencher o tabuleiro ate a terceira linha com 1 no devido local
+#	preencher da linha 6 a 8 com -1 no devido local
+# nome: 
+#	inicializa_tabuleiro:
+# parametros:
+#	[] -> lista vazia
+# retorno:
+#	None
+
+------------------------------------------------------------------------------
+
+*existe_captura(int)
+
+# descricao:
+#	funcao que checa se ha capturas, se houver, retorna a captura que deve ser feita
+# a funcao deve:
+#	percorrer todas as pecas do jogador da vez
+#	verificar se a peca e capaz de capturar
+#	gerar lista com possiveis capturas
+#	retornar a opcao adequada
+# casos:
+#	se a peca nao for dama
+#	se a peca for dama
+
+------------------------------------------------------------------------------
+
+*possibilidade_captura([str, str], int)
+
+# descricao:
+#	funcao que verifica possiveis capturas de uma peca em particular e retorna a possibiliade pela lei da maioria
+#
+
+------------------------------------------------------------------------------
+
+possibilidades([str, str], int)
+
+# descricao:
+#	funcao que retorna as possibilidades de jogada de uma peca se nao hover captura a ser feita
+# casos:
+#		*-*-NAO DAMA-*-*
+#	se houver duas casas ocupadas, nao e possivel mover a peca 
+#	se houver uma ocupada e uma livre, so e possivel mover para a livre 
+#	se houver duas casas livres, e possivel mover para quaquer uma
+#       se a peca estiver em uma das laterais e nao houver casa livre, nao e possivel mover a peca
+#       se a peca estiver em uma das laterais houver casa livre, e possivel mover a peca
+#	se a peca estiver na casa dama, n e possivel ir alem
+#		*-*-DAMA-*-*
+#	se a dama 
+# nome:
+#	possibilidades
+# parametros:
+#	[0] -> eixo x da peca
+#	[1] -> eixo y da peca
+#	int -> jogador da vez
+# retorno:
+#	[] -> lista de listas com possiveis jogadas daquela peca
+
+------------------------------------------------------------------------------
+
