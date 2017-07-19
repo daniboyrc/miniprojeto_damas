@@ -26,6 +26,21 @@ def inicializa_tabuleiro(tabuleiro):
 				if j % 2 != 0:
 					tabuleiro[i][j] = -1
 
+def procura_capturas(tabuleiro, vez):
+	if vez == 1 or vez == -1:
+		for i in range(len(tabuleiro)):
+			for j in range(len(tabuleiro[i])):
+				if tabuleiro[i][j] == vez:		
+					if i < 6 and j > 1 and tabuleiro[i + 1][j - 1] == (-1 * vez) and tabuleiro[i + 2][j - 2] == None: # tras - esquerda
+						return True
+					if i < 6 and j < 6 and tabuleiro[i + 1][j + 1] == (-1 * vez) and tabuleiro[i + 2][j + 2] == None: # tras - direita
+						return True
+					if i > 1 and j > 1 and tabuleiro[i - 1][j - 1] == (-1 * vez) and tabuleiro[i - 2][j - 2] == None: # frente - esquerda
+						return True
+					if i > 1 and j < 6 and tabuleiro[i - 1][j + 1] == (-1 * vez) and tabuleiro[i - 2][j + 2] == None: # frente - direita
+						return True
+		return False
+
 def possibilidades(tabuleiro, coord, vez):
 	if tabuleiro[coord[0]][coord[1]] == vez:
 		if vez == 1 or vez == -1:	# se nao for dama
@@ -67,6 +82,8 @@ while True:
 		print '\nVez de x'
 	else:
 		print '\nVez de o'
+	
+	print 'Captura:', procura_capturas(tabuleiro, vez)
 	
 	while True:
 		antes = raw_input('De: ').split()
