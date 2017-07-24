@@ -5,24 +5,24 @@
 from damas import *
 
 tabuleiro = []
-#inicializa_tabuleiro(tabuleiro)
+inicializa_tabuleiro(tabuleiro)
 
-###
-for i in range(8):
-	tabuleiro.append([])
-	for j in range(8):
-		tabuleiro[i].append(None)
+####
+#for i in range(8):
+	#tabuleiro.append([])
+	#for j in range(8):
+		#tabuleiro[i].append(None)
 			
-tabuleiro[5][0] = -1
-tabuleiro[4][1] = 1
-tabuleiro[4][3] = 1
-tabuleiro[4][5] = 1
-tabuleiro[2][1] = 1
-tabuleiro[2][3] = 1
-tabuleiro[2][5] = 1
-tabuleiro[6][3] = 1
+#tabuleiro[5][0] = -1
+#tabuleiro[4][1] = 1
+#tabuleiro[4][3] = 1
+#tabuleiro[4][5] = 1
+#tabuleiro[2][1] = 1
+#tabuleiro[2][3] = 1
+#tabuleiro[2][5] = 1
+#tabuleiro[6][3] = 1
 
-###
+####
 
 vez = -1
 while True:
